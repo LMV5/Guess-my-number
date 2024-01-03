@@ -13,19 +13,19 @@ html {
 
 body {
   font-family: "Quicksand", sans-serif;
-  color: #31e9e2;
-  background-color: #222;
+  color: #c5cae9;
+  background-color: #212121;
 }
 
 header {
   height: 35vh;
-  border-bottom: 7px solid #31e9e2;
+  border-bottom: 7px solid #c5cae9;
   position: relative;
 }
 
 main {
   height: 65vh;
-  color: #31e9e2;
+  color: #c5cae9;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -55,7 +55,7 @@ h1 {
 }
 
 .number {
-  background: #31e9e2;
+  background: #c5cae9;
   color: #333;
   font-size: 6rem;
   width: 15rem;
@@ -69,7 +69,7 @@ h1 {
 
 .btn {
   border: none;
-  background-color: #31e9e2;
+  background-color: #c5cae9;
   color: #333;
   font-size: 2rem;
   font-family: inherit;
@@ -78,7 +78,7 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #2ccac4;
+  background-color: #9fa8da;
 }
 
 .again {
@@ -89,7 +89,7 @@ h1 {
 
 .guess {
   background: none;
-  border: 4px solid #31e9e2;
+  border: 4px solid #c5cae9;
   font-family: inherit;
   color: inherit;
   font-size: 5rem;
