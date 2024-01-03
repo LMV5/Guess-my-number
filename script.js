@@ -30,7 +30,11 @@ btnCheck.addEventListener("click", function () {
   } else if (guess === randomNumber) {
     messageDisplay.textContent = "Correct number!";
     document.querySelector("body").style.backgroundColor = "#4caf50";
-    document.querySelector(".number").textContent = randomNumber;
+    number.textContent = randomNumber;
+    if (score > highscore) {
+      highscore = score;
+      highscoreDisplay.textContent = highscore;
+    }
   } else if (guess !== randomNumber) {
     if (score > 1) {
       messageDisplay.textContent =
