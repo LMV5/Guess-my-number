@@ -11,25 +11,30 @@ const highscoreDisplay = document.querySelector(".highscore");
 const btnAgain = document.querySelector(".again");
 const btnCheck = document.querySelector(".check");
 const number = document.querySelector(".number");
+const body = document.querySelector("body");
+
+const displayMessage = function (message) {
+  messageDisplay.textContent = message;
+};
 
 btnAgain.addEventListener("click", function () {
-  randomNumber = Math.trunc(Math.random() * 20) + 1;
   const guess = Number(guessInput.value);
+  randomNumber = Math.trunc(Math.random() * 20) + 1;
   guessInput.value = "";
   score = 20;
   number.textContent = "?";
   scoreDisplay.textContent = score;
-  messageDisplay.textContent = "Start guessing... (between 1 and 20)";
-  document.querySelector("body").style.backgroundColor = "#212121";
+  displayMessage("Start guessing... (between 1 and 20)");
+  body.style.backgroundColor = "#212121";
 });
 
 btnCheck.addEventListener("click", function () {
   const guess = Number(guessInput.value);
   if (!guess) {
-    messageDisplay.textContent = "Can't check! No number!";
+    displayMessage("Can't check! No number!");
   } else if (guess === randomNumber) {
-    messageDisplay.textContent = "Correct number!";
-    document.querySelector("body").style.backgroundColor = "#4caf50";
+    displayMessage("Correct number!");
+    body.style.backgroundColor = "#4caf50";
     number.textContent = randomNumber;
     if (score > highscore) {
       highscore = score;
@@ -37,13 +42,12 @@ btnCheck.addEventListener("click", function () {
     }
   } else if (guess !== randomNumber) {
     if (score > 1) {
-      messageDisplay.textContent =
-        guess > randomNumber ? "Too high!" : "Too low!";
+      displayMessage(guess > randomNumber ? "Too high!" : "Too low!");
       score--;
       scoreDisplay.textContent = score;
     } else {
-      messageDisplay.textContent = "You lost the game";
-      document.querySelector("body").style.backgroundColor = "#c62828";
+      displayMessage("You lost the game");
+      body.style.backgroundColor = "#c62828";
       scoreDisplay.textContent = 0;
     }
   }
