@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess my number</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Guess My Number!</h1>
-      <button class="btn">Start again</button>
-      <div>?</div>
+      <button class="btn again">Start again</button>
+      <div class="number">?</div>
     </header>
     <main>
       <section class="left">
@@ -18,9 +19,10 @@
       </section>
       <section class="right">
         <p class="message">Start guessing...</p>
-        <p class="label-score">1</p>
-        <p class="highscore">0</p>
+        <p class="label-score">Score: <span class="score">0</span></p>
+        <p class="highscore">Highscore: <span class="highscore">0</span></p>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
