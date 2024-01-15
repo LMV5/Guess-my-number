@@ -28,7 +28,7 @@ btnAgain.addEventListener("click", function () {
   body.style.backgroundColor = "#212121";
 });
 
-btnCheck.addEventListener("click", function () {
+const checkNumber = function () {
   const guess = Number(guessInput.value);
   if (!guess) {
     displayMessage("Can't check! No number!");
@@ -50,5 +50,13 @@ btnCheck.addEventListener("click", function () {
       body.style.backgroundColor = "#c62828";
       scoreDisplay.textContent = 0;
     }
+  }
+};
+
+btnCheck.addEventListener("click", checkNumber);
+
+document.addEventListener("keydown", function (e) {
+  if (Number(guessInput.value) || e.key === "Enter") {
+    checkNumber();
   }
 });
