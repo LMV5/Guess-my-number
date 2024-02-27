@@ -56,7 +56,5 @@ const checkNumber = function () {
 btnCheck.addEventListener("click", checkNumber);
 
 document.addEventListener("keydown", function (e) {
-  if (Number(guessInput.value) || e.key === "Enter") {
-    checkNumber();
-  }
+  if (e.key === "Enter") checkNumber();
 });
